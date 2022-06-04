@@ -37,6 +37,23 @@ body {
     src: url("font/UVNBucThu.TTF");
 }
 
+/* SCROLLBAR */
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+    margin-right: 5px;
+}
+
+body::-webkit-scrollbar-track {  /*thanh scroll*/
+    background-color: #ccc;
+    border-radius: 50px;
+}
+
 /* HEADER */
 #nav-contain {
     display: flex;
@@ -666,6 +683,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     user-select: none;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .member_slick {
@@ -1150,6 +1169,7 @@ body {
     overflow: hidden;
     box-shadow: 0 0 10px 3px rgb(108 98 98 / 20%);
     transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     visibility: hidden;
     opacity: 0;
 }
