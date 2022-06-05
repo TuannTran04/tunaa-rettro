@@ -1,20 +1,20 @@
-const menuShow = document.querySelector('#nav-icon a .menu');
-const menuClose = document.querySelector('#nav-icon a .close');
-const info = document.querySelector('.nav-info');
+const menuShow = document.querySelector('.nav_icon a .menu');
+const menuClose = document.querySelector('.nav_icon a .close');
+const info = document.querySelector('.nav_info');
 const arrowUp = document.querySelector('.arrow-up');
-const navHeader = document.querySelector('.nav-header #nav-contain');
+const navHeader = document.querySelector('.nav_contain');
 
 // Menu show
 menuShow.onclick = function (e) {
     e.preventDefault();
-    info.classList.toggle('nav-info_show');
+    info.classList.toggle('nav_info_show');
     e.target.classList.remove('active');
     menuClose.classList.add('active');
 }
 
 menuClose.onclick = function (e) {
     e.preventDefault();
-    info.classList.toggle('nav-info_show');
+    info.classList.toggle('nav_info_show');
     e.target.classList.remove('active');
     menuShow.classList.add('active');
 }
@@ -40,8 +40,11 @@ arrowUp.onclick = function (e) {
 
 // Header show
 window.addEventListener('scroll', function (e) {
-    if(window.scrollY > 300) {
-        
+    if(window.scrollY > 300 && window.scrollY < 700) {
+        navHeader.classList.add('hide');
     } 
+    else {
+        navHeader.classList.remove('hide');
+    }
 })
 
