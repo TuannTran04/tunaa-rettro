@@ -3,15 +3,22 @@ const menuClose = document.querySelector('.nav_icon a .close');
 const info = document.querySelector('.nav_info');
 const arrowUp = document.querySelector('.arrow-up');
 const navHeader = document.querySelector('.nav_header');
-const navHeaderHide = document.querySelector('.nav_contain.hide')
+const navHeaderHide = document.querySelector('.nav_contain.hide');
+const selectAppears = document.querySelectorAll('.form_select_appear');
+const selectAppearLists = document.querySelectorAll('.form_select_list');
+const options = document.querySelectorAll('.option');
+const currents = document.querySelectorAll('.current');
+console.log(selectAppears);
+console.log(selectAppearLists);
+console.log(currents);
 
 
 // Menu show
 menuShow.onclick = function (e) {
     e.preventDefault();
-        info.classList.toggle('nav_info_show');
-        e.target.classList.remove('active');
-        menuClose.classList.add('active');
+    info.classList.toggle('nav_info_show');
+    e.target.classList.remove('active');
+    menuClose.classList.add('active');
 }
 
 menuClose.onclick = function (e) {
@@ -50,5 +57,24 @@ window.addEventListener('scroll', function (e) {
         navHeader.classList.remove('hide');
         info.classList.remove('hide');
     }
+})
+
+
+// Show select list and choose options
+selectAppears.forEach(function (selectAppear, index) {
+    selectAppear.addEventListener('click', function (e) {
+        selectAppear.classList.toggle('open');
+        selectAppearLists[index].classList.toggle('open');
+    } ) 
+})
+
+
+var optionss = options.forEach(function(option, index) {
+    option.addEventListener('click', function (e) {
+        let textOp = option.innerText;
+        console.log(textOp);
+        
+        
+    })
 })
 
