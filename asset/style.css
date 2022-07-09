@@ -3052,7 +3052,7 @@ h6 {
     flex: 1;
 }
 
-.form_area_tile {
+.form_area_title {
     margin-bottom: 30px;
     color: #071112;
     font-style: normal;
@@ -3074,6 +3074,7 @@ h6 {
     outline: none;
     background: #f9f9ff;
     padding: 0 20px;
+    letter-spacing: 1px;
 }
 
 .form_ip_fname {
@@ -3141,7 +3142,6 @@ h6 {
 }
 
 .plan {
-
     color: #797979;
 }
 
@@ -3178,12 +3178,167 @@ h6 {
     text-align: left;
 }
 
+.form_textarea {
+    resize: none;
+    height: 100px;
+}
+
 .btn_area {
     max-width: 25%;
     padding-right: 15px;
     padding-left: 15px;
     flex: 1;
 }
+
+.btn_area_wrap {
+
+}
+
+.btn_area_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn_area_p {
+    max-width: 75%;
+    flex: 1;
+}
+
+.btn_area_p p {
+    color: #10285d;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.btn_area_switch {
+    max-width: 25%;
+}
+
+.btn_area_lblSwitch {
+    display: inline-block;
+}
+
+.btn_area_ckb {
+    display: none;
+}
+
+.out {
+    width: 37px;
+    height: 19px;
+    display: inline-block;
+    border-radius: 8.5px;
+    background-color: #f9f9ff;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.in {
+    width: 17px;
+    height: 17px;
+    background-color: white;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    box-shadow: 0 4px 5px 0 rgb(0 0 0 / 20%);
+    transition: all 0.5s ease;
+}
+
+.btn_area_ckb--1:checked + .out {
+    background-color: #1f2b7b;;
+}
+
+.btn_area_ckb--2:checked + .out {
+    background-color: #1f2b7b;;
+}
+
+.btn_area_ckb--3:checked + .out {
+    background-color: #3ED964;
+}
+
+.btn_area_ckb:checked + .out .in {
+    right: 1px;
+    left: 19.5px;
+}
+
+.selectboxes_area {
+    margin-top: 30px;
+}
+
+.form_select_appear--slb {
+    padding-left: 20px;
+    padding-right: 40px;
+    width: 160px;
+}
+
+.checkboxes_area {
+    margin-top: 30px;
+}
+
+.checkboxes_area_wrap {
+
+}
+
+.checkboxes_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkboxes_p {
+
+}
+
+.checkboxes_p p {
+    color: #10285d;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+}
+
+.checkboxes_wrap_ip {
+
+}
+
+.checkboxes_ip {
+    width: 15px;
+    height: 15px;
+}
+
+.checkboxes_ip--sample {
+    accent-color: pink;
+}
+
+.checkboxes_ip--primary {
+    accent-color: pink;
+}
+
+.checkboxes_ip--confirm {
+    accent-color: black;
+}
+
+.checkboxes_ip--disabled {
+    cursor: not-allowed;
+}
+
+.checkboxes_ip--disabledAndActive {
+    cursor: not-allowed;
+}
+
+.radios_area {
+    margin-top: 30px;
+}
+
+.radios_area_wrap {
+
+}
+
 
 /* ARROW UP */
 .arrow-up {

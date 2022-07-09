@@ -4,13 +4,6 @@ const info = document.querySelector('.nav_info');
 const arrowUp = document.querySelector('.arrow-up');
 const navHeader = document.querySelector('.nav_header');
 const navHeaderHide = document.querySelector('.nav_contain.hide');
-const selectAppears = document.querySelectorAll('.form_select_appear');
-const selectAppearLists = document.querySelectorAll('.form_select_list');
-const options = document.querySelectorAll('.option');
-const currents = document.querySelectorAll('.current');
-console.log(selectAppears);
-console.log(selectAppearLists);
-console.log(currents);
 
 
 // Menu show
@@ -59,22 +52,33 @@ window.addEventListener('scroll', function (e) {
     }
 })
 
-
 // Show select list and choose options
-selectAppears.forEach(function (selectAppear, index) {
-    selectAppear.addEventListener('click', function (e) {
-        selectAppear.classList.toggle('open');
-        selectAppearLists[index].classList.toggle('open');
-    } ) 
-})
+var navigationSelect = document.querySelector('.form_select_area_1');
+var navigationSelect2 = document.querySelector('.form_select_area_2');
+var navigationSelect3 = document.querySelector('.form_select_area_3');
 
+function initSelect(elem) {
+    var selectWrap = elem.querySelector('.form_select_appear');
+    var dropSelect = elem.querySelector('.form_select_list');
+    var options = elem.querySelectorAll('.option');
+    const current = elem.querySelector('.current');
+    
+    selectWrap.addEventListener('click', function (e) {
+        e.stopPropagation();
+        selectWrap.classList.toggle('open');
+        dropSelect.classList.toggle('open');
+    });
+    
+    options.forEach(function (currentOption) {
+        currentOption.addEventListener('click', function (e) {
+            e.stopPropagation();
+            current.innerText = currentOption.textContent;
+            selectWrap.classList.toggle('open');
+            dropSelect.classList.toggle('open');
+        });
+    });
+};
 
-var optionss = options.forEach(function(option, index) {
-    option.addEventListener('click', function (e) {
-        let textOp = option.innerText;
-        console.log(textOp);
-        
-        
-    })
-})
-
+initSelect(navigationSelect);
+initSelect(navigationSelect2);
+initSelect(navigationSelect3);
